@@ -256,6 +256,14 @@ screens = [
                 widget.Systray(
                     fontsize = barFontSize,
                     font = barFont,
+                    background = background2,
+                    foreground = primary,
+                ),
+                widget.Sep(
+                    foreground = background2,
+                    padding = 0,
+                    linewidth = 10,
+                    size_percent = 100,
                 ),
                 widget.Clock(
                     format="%d.%m.%Y | %I:%M:%S",
