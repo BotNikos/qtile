@@ -9,8 +9,8 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 from libqtile.log_utils import logger
 
-mod = "mod1"
-mod4 = "mod4"
+mod = "mod4"
+mod4 = "mod1"
 terminal = guess_terminal()
 
 @hook.subscribe.startup_once
@@ -56,10 +56,10 @@ keys = [
     Key([mod], "r", lazy.spawn("rofi -show run"), desc="Spawn a command using rofi"),
 
     # custom keybindings
-    Key([mod4], "space", lazy.widget["keyboardlayout"].next_keyboard(), desc="Change keyboard layout"),
-    Key([mod4], "e", lazy.spawn("emacs"), desc="Run editor"),
-    Key([mod4], "b", lazy.spawn("firefox"), desc="Run browser"),
-    Key([mod4], "m", lazy.spawn("firefox --new-window https://open.spotify.com"), desc="Runs spotify in browser"),
+    Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(), desc="Change keyboard layout"),
+    Key([mod, "shift"], "e", lazy.spawn("emacs"), desc="Run editor"),
+    Key([mod, "shift"], "b", lazy.spawn("firefox"), desc="Run browser"),
+    Key([mod, "shift"], "m", lazy.spawn("firefox --new-window https://open.spotify.com"), desc="Runs spotify in browser"),
 ]
 
 groupDict = [
@@ -116,9 +116,9 @@ keys.extend([
     Key([mod, "shift"], "space", lazy.layout.flip()), 
 ])
 
-barFontSize = 17 
-barFont = "Hack"
-barBoldFont = "Hack Bold"
+barFontSize = 18 
+barFont = "mononoki"
+barBoldFont = "mononoki Bold"
 
 #colors
 background = "#282A36"
